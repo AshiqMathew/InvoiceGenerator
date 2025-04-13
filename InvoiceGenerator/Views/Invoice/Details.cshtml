@@ -1,0 +1,55 @@
+﻿@model InvoiceGenerator.Models.Invoice
+
+@{
+    ViewData["Title"] = "Invoice Details";
+}
+
+<div class="container mt-4">
+    <h1 class="text-center text-primary fw-bold mb-4">Invoice Details</h1>
+
+    <div class="card shadow-sm border-0">
+        <div class="card-body">
+            <dl class="row mb-0">
+                <dt class="col-sm-4 fw-semibold text-secondary">
+                    @Html.DisplayNameFor(model => model.CustomerName)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.CustomerName)
+                </dd>
+
+                <dt class="col-sm-4 fw-semibold text-secondary">
+                    @Html.DisplayNameFor(model => model.CustomerAddress)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.CustomerAddress)
+                </dd>
+
+                <dt class="col-sm-4 fw-semibold text-secondary">
+                    @Html.DisplayNameFor(model => model.InvoiceDate)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.InvoiceDate)
+                </dd>
+
+                <dt class="col-sm-4 fw-semibold text-secondary">
+                    @Html.DisplayNameFor(model => model.ItemNames)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.ItemNames)
+                </dd>
+
+                <dt class="col-sm-4 fw-semibold text-secondary">
+                    @Html.DisplayNameFor(model => model.TotalAmount)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.TotalAmount)
+                </dd>
+            </dl>
+        </div>
+    </div>
+
+    <div class="mt-4 d-flex justify-content-between">
+        <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-primary">Edit</a>
+        <a asp-action="Index" class="btn btn-outline-secondary">Back to List</a>
+    </div>
+</div>
