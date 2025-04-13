@@ -1,1 +1,1 @@
-This is A Web App created using MVC with EF
+This is A Web App created using MVC CRUD with EF
